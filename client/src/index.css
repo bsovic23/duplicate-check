@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* CSS */
+
+/* Duplicate Check ===================================== */
+/* Duplicate Check Form ======= */
+
+.duplicate-check-form form div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.duplicate-check-form form label {
+  margin-right: 10px;
+}
