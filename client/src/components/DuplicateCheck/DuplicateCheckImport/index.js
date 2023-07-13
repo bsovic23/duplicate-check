@@ -26,6 +26,7 @@ const DuplicateCheckImport = () => {
 
   return (
     <div>
+      <h1>Import Your Excel File Here</h1>
       <input type="file" accept=".xlsx" onChange={handleFileChange} />
       {tableData && (
         <table>
