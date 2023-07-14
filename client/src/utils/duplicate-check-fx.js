@@ -10,3 +10,12 @@
 
 // 4. FN, LN
 
+// 5. FN, Digits, DOB
+
+// 6. LN, Digits, DOB
+
+// 7. FN, DOB
+
+// 8, LN, DOB
+
+// 9. Digits, DOB
