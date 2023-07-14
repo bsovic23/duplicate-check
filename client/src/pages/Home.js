@@ -9,20 +9,25 @@ const Home = () => {
             </header>
            <section>
             <div class="container text-center">
-                    <div class="row align-items-start">
+                    <div class="row">
                         <div class="col">
                             <h1>WELCOME TO RABRIT</h1>
                             <h3>Version 1.01</h3>
                             <h4>Last Updated: 7/12/2023</h4>
                         </div>
-                        <div class="col">
-                            RABRIT LOGO
+                        <div>
+                            <div class="col" style={{ width: '50%', height: '50%', margin: '10px' }}>
+                                <video autoPlay muted loop>
+                                    <source src={require("../images/Animation.mp4")} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
                         </div>
                     </div>
                 </div>
            </section>
             <footer class='footer'>
-                FOOTER
+                FOOTER: GITHUB AND LINKEDIN LOGO LINKS
             </footer>
         </section>
     )
