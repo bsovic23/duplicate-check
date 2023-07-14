@@ -1,5 +1,19 @@
 import React, { useState } from 'react';
 
+const mockData = [
+    {id: 1, firstName: 'bill', lastName: 'bob', dob: '2020/02/02', digits: '1111', site: 'CUIMC', enter: 'no'},
+    {id: 2, firstName: 'bill', lastName: 'bob', dob: '2020/02/02', digits: '1111', site: 'CUIMC', enter: 'no'},
+    {id: 3, firstName: 'rick', lastName: 'bob', dob: '2020/02/02', digits: '1111', site: 'CUIMC', enter: 'no'},
+    {id: 4, firstName: 'bill', lastName: 'bob', dob: '2020/02/02', digits: '1111', site: 'CUIMC', enter: 'no'},
+    {id: 5, firstName: 'bill', lastName: 'jones', dob: '2020/02/02', digits: '1111', site: 'CUIMC', enter: 'no'},
+];
+
+// Component Imports
+import DuplicateCheckResults from '../DuplicateCheckResults';
+
+// Function Imports
+import { functionFourEnrollment } from '../../../utils/duplicate-check-fx';
+
 function DuplicateCheckForm() {
     
     // Handle Enrollment vs Weekly Screening
@@ -13,7 +27,9 @@ function DuplicateCheckForm() {
         setShowForm('screening');
     };
 
-    // Enrollment Screening
+    // Enrollment Screening ====================================================================
+    const [resultFour, setResultFour] = useState(null);
+
     const initialFormData = {
         firstName: '',
         lastName: '',
@@ -28,6 +44,7 @@ function DuplicateCheckForm() {
         const { name, value } = event.target;
         setFormData((prevData) => ({
             ...prevData,
+            enter: 'yes',
             [name]: value,
         }));
     };
@@ -35,8 +52,12 @@ function DuplicateCheckForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(formData);
+        const resultFour = functionFourEnrollment(mockData, formData);
+        setResultFour(resultFour);
         setFormData(initialFormData);
     }
+
+    // Weekly Screening ====================================================================
 
     return(
         <section class='duplicate-check-form'>
@@ -88,6 +109,14 @@ function DuplicateCheckForm() {
                     value={formData.dob}
                     onChange={handleChange}
                 />
+                 <label htmlFor='digits'>Digits:</label>
+                <input
+                    type="text"
+                    id="digits"
+                    name="digits"
+                    value={formData.digits}
+                    onChange={handleChange}
+                />
 
                     <button type='submit'>Check Enrollment</button>
                 </form>
@@ -102,9 +131,13 @@ function DuplicateCheckForm() {
                     <button type='submit'>Check Screening</button>
                 </form>
             </section>
-            )}
+            )}        
 
-            
+            <section>
+                {resultFour && (
+                <DuplicateCheckResults result={resultFour} />
+                )} 
+            </section>
         </section>
     )
 };

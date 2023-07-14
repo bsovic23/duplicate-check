@@ -2,6 +2,42 @@
 
 // Need to create the different sections for each round of duplicate screening
 
+// ENROLLMENT FUNCTIONS ==================================================================================
+// 1. FN, LN, DOB, DIGITS
+
+// 2. FN, LN, DOB,
+
+// 3. FN, LN, DIGITS
+
+// 4. FN, LN
+export const functionFourEnrollment = (currentData, enterData) => {
+    const duplicates = currentData.filter((data) => (
+      data.firstName === enterData.firstName &&
+      data.lastName === enterData.lastName
+    ));
+  
+    if (duplicates.length > 0) {
+      return [
+        enterData,
+        ...duplicates
+      ];
+    } else {
+      return [{}];
+    }
+  };
+
+// 5. FN, Digits, DOB
+
+// 6. LN, Digits, DOB
+
+// 7. FN, DOB
+
+// 8, LN, DOB
+
+// 9. Digits, DOB
+
+
+// WEEKLY SCREENING FUNCTIONS ==================================================================================
 // 1. FN, LN, DOB, DIGITS
 
 // 2. FN, LN, DOB,
