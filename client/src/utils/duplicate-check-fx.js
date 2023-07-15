@@ -8,6 +8,22 @@
 // 2. FN, LN, DOB,
 
 // 3. FN, LN, DIGITS
+export const functionThreeEnrollment = (currentData, enterData) => {
+  const duplicates = currentData.filter((data) => (
+    data.firstName === enterData.firstName &&
+    data.lastName === enterData.lastName &&
+    data.digits === enterData.digits
+  ));
+
+  if (duplicates.length > 0) {
+    return [
+      enterData,
+      ...duplicates
+    ];
+  } else {
+    return [{}];
+  }
+};
 
 // 4. FN, LN
 export const functionFourEnrollment = (currentData, enterData) => {

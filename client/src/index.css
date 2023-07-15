@@ -25,3 +25,32 @@ code {
 .duplicate-check-form form label {
   margin-right: 10px;
 }
+
+/* Duplicate Check Results ======= */
+
+th {
+  background-color: green;
+}
+
+.cell {
+  padding: 8px;
+}
+
+/* Swiper */
+.swiper {
+  width: 90%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}

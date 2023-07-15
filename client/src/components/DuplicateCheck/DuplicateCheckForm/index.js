@@ -1,21 +1,14 @@
 import React, { useState } from 'react';
 
-const mockData = [
-    {id: 1, firstName: 'bill', lastName: 'bob', dob: '2020/02/02', digits: '1111', site: 'CUIMC', enter: 'no'},
-    {id: 2, firstName: 'bill', lastName: 'bob', dob: '2020/02/02', digits: '1111', site: 'CUIMC', enter: 'no'},
-    {id: 3, firstName: 'rick', lastName: 'bob', dob: '2020/02/02', digits: '1111', site: 'CUIMC', enter: 'no'},
-    {id: 4, firstName: 'bill', lastName: 'bob', dob: '2020/02/02', digits: '1111', site: 'CUIMC', enter: 'no'},
-    {id: 5, firstName: 'bill', lastName: 'jones', dob: '2020/02/02', digits: '1111', site: 'CUIMC', enter: 'no'},
-];
-
 // Component Imports
 import DuplicateCheckResults from '../DuplicateCheckResults';
 
 // Function Imports
-import { functionFourEnrollment } from '../../../utils/duplicate-check-fx';
+import { functionThreeEnrollment, functionFourEnrollment } from '../../../utils/duplicate-check-fx';
 
-function DuplicateCheckForm() {
-    
+const DuplicateCheckForm = (props) => {
+    const { excelData } = props;
+
     // Handle Enrollment vs Weekly Screening
     const [ showForm, setShowForm ] = useState('blank');
 
@@ -28,6 +21,7 @@ function DuplicateCheckForm() {
     };
 
     // Enrollment Screening ====================================================================
+    const [resultThree, setResultThree] = useState(null);
     const [resultFour, setResultFour] = useState(null);
 
     const initialFormData = {
@@ -52,13 +46,19 @@ function DuplicateCheckForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(formData);
-        const resultFour = functionFourEnrollment(mockData, formData);
+        console.log(excelData);
+        const resultThree = functionThreeEnrollment(excelData, formData);
+        const resultFour = functionFourEnrollment(excelData, formData);
+        console.log(resultThree);
+        console.log(resultFour);
+        setResultThree(resultThree);
         setResultFour(resultFour);
         setFormData(initialFormData);
-    }
+    };
 
     // Weekly Screening ====================================================================
 
+    // Copmonent ===========================================================================
     return(
         <section class='duplicate-check-form'>
             <section>
@@ -134,8 +134,8 @@ function DuplicateCheckForm() {
             )}        
 
             <section>
-                {resultFour && (
-                <DuplicateCheckResults result={resultFour} />
+                {(resultThree || resultFour) && (
+                <DuplicateCheckResults results={[resultThree, resultFour]} />
                 )} 
             </section>
         </section>
