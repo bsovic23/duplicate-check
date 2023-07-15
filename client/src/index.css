@@ -13,6 +13,15 @@ code {
 }
 
 /* CSS */
+/* HOME =============================================== */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  flex: 1;
+}
 
 /* Duplicate Check ===================================== */
 /* Duplicate Check Form ======= */
