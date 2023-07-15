@@ -61,17 +61,12 @@ const DuplicateCheckForm = (props) => {
     // Copmonent ===========================================================================
     return(
         <section class='duplicate-check-form'>
-            <section>
-                <h1>What would you like to do?</h1>
-                <button onClick={handleEnrollment}>Enrollment Screening</button>
-                <button onClick={handleScreening}>Weekly Duplicate Screening</button>
-            </section>
-
-            {showForm === 'blank' && (
-            <section>
-                Please click one of the two buttons above to get started!
-            </section>
-            )}
+           
+                <section>
+                    <h1>What would you like to do?</h1>
+                    <button onClick={handleEnrollment}>Enrollment Screening</button>
+                    <button onClick={handleScreening}>Weekly Duplicate Screening</button>
+                </section>
 
             {showForm === 'enrollment' && (
             <section>
