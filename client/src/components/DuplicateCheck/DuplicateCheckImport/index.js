@@ -29,11 +29,15 @@ const DuplicateCheckImport = () => {
         row.eachCell((cell, colNumber) => {
             const cellValue = cell.type === ExcelJS.ValueType.Date ? cell.value.toString() : cell.value;
             const header = headers[colNumber - 1];
-            rowData[header] = cellValue;
-          });
-        data.push(rowData);
-      }
-    });
+        if (header === 'digits') {
+          rowData[header] = cellValue.toString();
+        } else {
+          rowData[header] = cellValue;
+        }
+      });
+      data.push(rowData);
+    }
+  });
 
     // Use the 'data' array here or pass it to another function/component
     setExcelData(data);

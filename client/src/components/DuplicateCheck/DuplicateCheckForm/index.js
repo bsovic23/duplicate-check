@@ -4,7 +4,17 @@ import React, { useState } from 'react';
 import DuplicateCheckResults from '../DuplicateCheckResults';
 
 // Function Imports
-import { functionThreeEnrollment, functionFourEnrollment } from '../../../utils/duplicate-check-fx';
+import { 
+    functionOneEnrollment,
+    functionTwoEnrollment,
+    functionThreeEnrollment, 
+    functionFourEnrollment,
+    functionFiveEnrollment,
+    functionSixEnrollment,
+    functionSevenEnrollment,
+    functionEightEnrollment,
+    functionNineEnrollment, 
+} from '../../../utils/duplicate-check-fx';
 
 const DuplicateCheckForm = (props) => {
     const { excelData } = props;
@@ -21,8 +31,15 @@ const DuplicateCheckForm = (props) => {
     };
 
     // Enrollment Screening ====================================================================
+    const [resultOne, setResultOne] = useState(null);
+    const [resultTwo, setResultTwo] = useState(null);
     const [resultThree, setResultThree] = useState(null);
     const [resultFour, setResultFour] = useState(null);
+    const [resultFive, setResultFive] = useState(null);
+    const [resultSix, setResultSix] = useState(null);
+    const [resultSeven, setResultSeven] = useState(null);
+    const [resultEight, setResultEight] = useState(null);
+    const [resultNine, setResultNine] = useState(null);
 
     const initialFormData = {
         firstName: '',
@@ -47,13 +64,30 @@ const DuplicateCheckForm = (props) => {
         event.preventDefault();
         console.log(formData);
         console.log(excelData);
+        const resultOne = functionOneEnrollment(excelData, formData);
+        const resultTwo = functionTwoEnrollment(excelData, formData);
         const resultThree = functionThreeEnrollment(excelData, formData);
         const resultFour = functionFourEnrollment(excelData, formData);
-        console.log(resultThree);
-        console.log(resultFour);
+        const resultFive = functionFiveEnrollment(excelData, formData);
+        const resultSix = functionSixEnrollment(excelData, formData);
+        const resultSeven = functionSevenEnrollment(excelData, formData);
+        const resultEight = functionEightEnrollment(excelData, formData);
+        const resultNine = functionNineEnrollment(excelData, formData);
+        setResultOne(resultOne);
+        setResultTwo(resultTwo);
         setResultThree(resultThree);
         setResultFour(resultFour);
+        setResultFive(resultFive);
+        setResultSix(resultSix);
+        setResultSeven(resultSeven);
+        setResultEight(resultEight);
+        setResultNine(resultNine);
         setFormData(initialFormData);
+    };
+
+    const handleSubmitScreening = (event) => {
+        event.preventDefault();
+        window.alert("weekly screening!");
     };
 
     // Weekly Screening ====================================================================
@@ -121,16 +155,15 @@ const DuplicateCheckForm = (props) => {
             {showForm === 'screening' && (
             <section>
                 <h2>Weekly Duplicate Screening</h2>
-                <form>
-                
+                <form onSubmit={handleSubmitScreening}>
                     <button type='submit'>Check Screening</button>
                 </form>
             </section>
             )}        
 
             <section>
-                {(resultThree || resultFour) && (
-                <DuplicateCheckResults results={[resultThree, resultFour]} />
+                {(resultOne || resultTwo || resultThree || resultFour || resultFive || resultSix || resultSeven || resultEight || resultNine ) && (
+                <DuplicateCheckResults results={[resultOne, resultTwo, resultThree, resultFour, resultFive, resultSix, resultSeven, resultEight, resultNine ]} />
                 )} 
             </section>
         </section>

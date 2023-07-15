@@ -12,9 +12,6 @@ const DuplicateCheck = () => {
             <section>
                 < DuplicateCheckImport />
             </section>
-            <section>
-                <DuplicateCheckForm />
-            </section>
         </section>
     )
 };
