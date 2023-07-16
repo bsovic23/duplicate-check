@@ -165,19 +165,187 @@ export const functionNineEnrollment = (currentData, enterData) => {
 
 // WEEKLY SCREENING FUNCTIONS ==================================================================================
 // 1. FN, LN, DOB, DIGITS
+export const functionOneScreening = (excelData) => {
+  const duplicates = [];
 
-// 2. FN, LN, DOB,
+  excelData.forEach((obj, index) => {
+    if (obj.enter === 'yes') {
+      const matchingObjects = excelData.filter(
+        (o, i) =>
+          i !== index &&
+          o.firstName === obj.firstName &&
+          o.lastName === obj.lastName &&
+          o.dob === obj.dob &&
+          o.digits === obj.digits
+      );
+
+      duplicates.push(obj, ...matchingObjects);
+    }
+  });
+
+  return duplicates;
+};
+
+// 2. FN, LN, DOB
+export const functionTwoScreening = (excelData) => {
+  const duplicates = [];
+
+  excelData.forEach((obj, index) => {
+    if (obj.enter === 'yes') {
+      const matchingObjects = excelData.filter(
+        (o, i) =>
+          i !== index &&
+          o.firstName === obj.firstName &&
+          o.lastName === obj.lastName &&
+          o.dob === obj.dob 
+      );
+
+      duplicates.push(obj, ...matchingObjects);
+    }
+  });
+
+  return duplicates;
+};
 
 // 3. FN, LN, DIGITS
+export const functionThreeScreening = (excelData) => {
+  const duplicates = [];
+
+  excelData.forEach((obj, index) => {
+    if (obj.enter === 'yes') {
+      const matchingObjects = excelData.filter(
+        (o, i) =>
+          i !== index &&
+          o.firstName === obj.firstName &&
+          o.lastName === obj.lastName &&
+          o.digits === obj.digits 
+      );
+
+      duplicates.push(obj, ...matchingObjects);
+    }
+  });
+
+  return duplicates;
+};
 
 // 4. FN, LN
+export const functionFourScreening = (excelData) => {
+  const duplicates = [];
+
+  excelData.forEach((obj, index) => {
+    if (obj.enter === 'yes') {
+      const matchingObjects = excelData.filter(
+        (o, i) =>
+          i !== index &&
+          o.firstName === obj.firstName &&
+          o.lastName === obj.lastName
+      );
+
+      duplicates.push(obj, ...matchingObjects);
+    }
+  });
+
+  return duplicates;
+};
 
 // 5. FN, Digits, DOB
+export const functionFiveScreening = (excelData) => {
+  const duplicates = [];
+
+  excelData.forEach((obj, index) => {
+    if (obj.enter === 'yes') {
+      const matchingObjects = excelData.filter(
+        (o, i) =>
+          i !== index &&
+          o.firstName === obj.firstName &&
+          o.digits === obj.digits &&
+          o.dob === obj.dob
+      );
+
+      duplicates.push(obj, ...matchingObjects);
+    }
+  });
+
+  return duplicates;
+};
 
 // 6. LN, Digits, DOB
+export const functionSixScreening = (excelData) => {
+  const duplicates = [];
+
+  excelData.forEach((obj, index) => {
+    if (obj.enter === 'yes') {
+      const matchingObjects = excelData.filter(
+        (o, i) =>
+          i !== index &&
+          o.lastName === obj.lastName &&
+          o.digits === obj.digits &&
+          o.dob === obj.dob
+      );
+
+      duplicates.push(obj, ...matchingObjects);
+    }
+  });
+
+  return duplicates;
+};
 
 // 7. FN, DOB
+export const functionSevenScreening = (excelData) => {
+  const duplicates = [];
+
+  excelData.forEach((obj, index) => {
+    if (obj.enter === 'yes') {
+      const matchingObjects = excelData.filter(
+        (o, i) =>
+          i !== index &&
+          o.firstName === obj.firstName &&
+          o.dob === obj.dob
+      );
+
+      duplicates.push(obj, ...matchingObjects);
+    }
+  });
+
+  return duplicates;
+};
 
 // 8, LN, DOB
+export const functionEightScreening = (excelData) => {
+  const duplicates = [];
+
+  excelData.forEach((obj, index) => {
+    if (obj.enter === 'yes') {
+      const matchingObjects = excelData.filter(
+        (o, i) =>
+          i !== index &&
+          o.lastName === obj.lastName &&
+          o.dob === obj.dob
+      );
+
+      duplicates.push(obj, ...matchingObjects);
+    }
+  });
+
+  return duplicates;
+};
 
 // 9. Digits, DOB
+export const functionNineScreening = (excelData) => {
+  const duplicates = [];
+
+  excelData.forEach((obj, index) => {
+    if (obj.enter === 'yes') {
+      const matchingObjects = excelData.filter(
+        (o, i) =>
+          i !== index &&
+          o.digits === obj.digits &&
+          o.dob === obj.dob
+      );
+
+      duplicates.push(obj, ...matchingObjects);
+    }
+  });
+
+  return duplicates;
+};

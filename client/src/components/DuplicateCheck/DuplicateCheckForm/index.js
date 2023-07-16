@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 
 // Component Imports
 import DuplicateCheckResults from '../DuplicateCheckResults';
+import DuplicateCheckScreeningResults from '../DuplicateCheckScreeningResults';
 
-// Function Imports
+// Enrollment Function Imports
 import { 
     functionOneEnrollment,
     functionTwoEnrollment,
@@ -15,6 +16,23 @@ import {
     functionEightEnrollment,
     functionNineEnrollment, 
 } from '../../../utils/duplicate-check-fx';
+
+// Screening Function Imports
+import {
+    functionOneScreening,
+    functionTwoScreening,
+    functionThreeScreening,
+    functionFourScreening,
+    functionFiveScreening,
+    functionSixScreening,
+    functionSevenScreening,
+    functionEightScreening,
+    functionNineScreening,
+} from '../../../utils/duplicate-check-fx';
+
+// =========================================================================================================
+// Component ===============================================================================================
+// =========================================================================================================
 
 const DuplicateCheckForm = (props) => {
     const { excelData } = props;
@@ -30,7 +48,8 @@ const DuplicateCheckForm = (props) => {
         setShowForm('screening');
     };
 
-    // Enrollment Screening ====================================================================
+    // Enrollment  ====================================================================
+
     const [resultOne, setResultOne] = useState(null);
     const [resultTwo, setResultTwo] = useState(null);
     const [resultThree, setResultThree] = useState(null);
@@ -40,7 +59,8 @@ const DuplicateCheckForm = (props) => {
     const [resultSeven, setResultSeven] = useState(null);
     const [resultEight, setResultEight] = useState(null);
     const [resultNine, setResultNine] = useState(null);
-
+   
+    // Form Data
     const initialFormData = {
         firstName: '',
         lastName: '',
@@ -62,8 +82,6 @@ const DuplicateCheckForm = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(formData);
-        console.log(excelData);
         const resultOne = functionOneEnrollment(excelData, formData);
         const resultTwo = functionTwoEnrollment(excelData, formData);
         const resultThree = functionThreeEnrollment(excelData, formData);
@@ -85,14 +103,42 @@ const DuplicateCheckForm = (props) => {
         setFormData(initialFormData);
     };
 
+    // Weekly Screening ====================================================================
+    const [resultScreeningOne, setScreeningOne] = useState(null);
+    const [resultScreeningTwo, setScreeningTwo] = useState(null);
+    const [resultScreeningThree, setScreeningThree] = useState(null);
+    const [resultScreeningFour, setScreeningFour] = useState(null);
+    const [resultScreeningFive, setScreeningFive] = useState(null);
+    const [resultScreeningSix, setScreeningSix] = useState(null);
+    const [resultScreeningSeven, setScreeningSeven] = useState(null);
+    const [resultScreeningEight, setScreeningEight] = useState(null);
+    const [resultScreeningNine, setScreeningNine] = useState(null);
+
     const handleSubmitScreening = (event) => {
         event.preventDefault();
-        window.alert("weekly screening!");
+        const resultScreeningOne = functionOneScreening(excelData);
+        const resultScreeningTwo = functionTwoScreening(excelData);
+        const resultScreeningThree = functionThreeScreening(excelData);
+        const resultScreeningFour = functionFourScreening(excelData);
+        const resultScreeningFive = functionFiveScreening(excelData);
+        const resultScreeningSix = functionSixScreening(excelData);
+        const resultScreeningSeven = functionSevenScreening(excelData);
+        const resultScreeningEight = functionEightScreening(excelData);
+        const resultScreeningNine = functionNineScreening(excelData);
+        setScreeningOne(resultScreeningFour);
+        setScreeningTwo(resultScreeningFour);
+        setScreeningThree(resultScreeningFour);
+        setScreeningFour(resultScreeningFour);
+        setScreeningFour(resultScreeningFour);
+        setScreeningFour(resultScreeningFour);
+        setScreeningFour(resultScreeningFour);
+        setScreeningFour(resultScreeningFour);
+        setScreeningNine(resultScreeningFour);
     };
 
-    // Weekly Screening ====================================================================
-
-    // Copmonent ===========================================================================
+    //  ===========================================================================
+    // Copmonent Return ===========================================================================
+    //  ===========================================================================
     return(
         <section class='duplicate-check-form'>
            
@@ -164,6 +210,11 @@ const DuplicateCheckForm = (props) => {
             <section>
                 {(resultOne || resultTwo || resultThree || resultFour || resultFive || resultSix || resultSeven || resultEight || resultNine ) && (
                 <DuplicateCheckResults results={[resultOne, resultTwo, resultThree, resultFour, resultFive, resultSix, resultSeven, resultEight, resultNine ]} />
+                )} 
+            </section>
+            <section>
+                {(resultScreeningOne || resultScreeningTwo || resultScreeningThree || resultScreeningFour || resultScreeningFive || resultScreeningSix || resultScreeningSeven || resultScreeningEight || resultScreeningNine) && (
+                <DuplicateCheckScreeningResults results={[resultScreeningOne ,resultScreeningTwo, resultScreeningThree, resultScreeningFour, resultScreeningFive, resultScreeningSix, resultScreeningSeven, resultScreeningEight, resultScreeningNine]} />
                 )} 
             </section>
         </section>

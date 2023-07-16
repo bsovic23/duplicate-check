@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../components/Navbar';
 
 const Home = () => {
-    const homeNavChoices = [
+    const navChoices = [
         {id: 1, text: "Home", link: "/"},
         {id: 2, text: "About", link: "/About"},
         {id: 3, text: "Duplicate Check", link: "/duplicate"},
@@ -21,7 +21,7 @@ const Home = () => {
                     <h4>Last Updated: 7/12/2023</h4>
                 </div>
                 <div>
-                    <Navbar navElements={homeNavChoices}/>
+                    <Navbar navElements={navChoices}/>
                 </div>
             </section>
             <section className="flex-container">
