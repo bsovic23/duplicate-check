@@ -7,9 +7,7 @@ const Navbar = ({navElements}) => {
         <section class='navbar'>
             <nav>
                 {navElements.map((nav) => (
-                    <p key={nav.id}>
-                        <Link to={nav.link}>{nav.text}</Link>
-                    </p>
+                    <Link key={nav.id} className="nav-link" to={nav.link}>{nav.text}</Link>
                 ))}
             </nav>
         </section>
