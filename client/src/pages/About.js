@@ -17,7 +17,7 @@ function About() {
     return(
         <section>
             <section>
-                About the Co-Enrollment Application
+                <h1>About the Co-Enrollment Application</h1>
             </section>
             <section>
                 NAVBAR
@@ -25,12 +25,11 @@ function About() {
             <section class="container">
                 <div class="m-5 row">
                     <div class="col">
-                        <h1>About Brit</h1>
-                        <p>PIC BRIT</p>
+                        <h2>About Brit</h2>
                         <p>Decription Brit</p>
                     </div>
                     <div class="col">
-                        <h1>Application Tests For</h1>
+                        <h2>Application Tests For</h2>
                         <p>The application tests for 9 different series of potential duplicate</p>
                         <ol>
                             <li>First Name, Last Name, Digits, Date of Birth</li>
@@ -47,7 +46,7 @@ function About() {
                 </div>
             </section>
             <section>
-                <h2>Benefits of RABRIT</h2>
+                <h3>Benefits of RABRIT</h3>
                 <div>
                 <Swiper
                         effect={'coverflow'}

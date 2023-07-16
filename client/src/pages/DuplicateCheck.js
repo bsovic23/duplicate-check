@@ -14,6 +14,9 @@ const DuplicateCheck = () => {
 
     return(
         <section class='duplcate-check'>
+            <section>
+                <h1>Duplicate Check</h1>
+            </section>
             <div>
                 <Navbar navElements={navChoices} />
             </div>

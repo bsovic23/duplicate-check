@@ -44,11 +44,15 @@ const DuplicateCheckImport = () => {
   };
 
   return (
-    <div>
-      <h1>Import Your Excel File Here</h1>
-      <input type="file" accept=".xlsx" onChange={handleFileChange} />
-      {excelData && <DuplicateCheckForm excelData={excelData} />}
-    </div>
+    <section class="duplicate-check-import">
+        <h1>Import Your Excel File Here</h1>
+        <div class="file-input">
+          <input type="file" accept=".xlsx" onChange={handleFileChange} />
+        </div>
+        <div class="duplicate-check-form">
+          {excelData && <DuplicateCheckForm excelData={excelData} />}
+        </div>
+    </section>
   );
 };
 

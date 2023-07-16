@@ -9,26 +9,28 @@ import DuplicateCheck from './pages/DuplicateCheck';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={<Home />}
-        />
-        <Route
-          path="/about"
-          element={<About />}
-        />
-        <Route
-          path="/duplicate"
-          element={<DuplicateCheck />}
-        />
-        <Route
-          path="*"
-          element={<NoMatch />}
-        />
-      </Routes>
-    </Router>
+    <section class='application'>
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={<Home />}
+          />
+          <Route
+            path="/about"
+            element={<About />}
+          />
+          <Route
+            path="/duplicate"
+            element={<DuplicateCheck />}
+          />
+          <Route
+            path="*"
+            element={<NoMatch />}
+          />
+        </Routes>
+      </Router>
+    </section>
   );
 }
 

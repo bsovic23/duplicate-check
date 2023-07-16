@@ -13,33 +13,27 @@ const Home = () => {
         {id: 4, text: "Comment", link: "/"}
     ];
 
-    return(
+    return (
         <section className='home'>
-            <section className="flex-container">
-                <div>
-                    <h1>WELCOME TO RABRIT</h1>
-                    <h3>Version 1.01</h3>
-                    <h4>Last Updated: 7/12/2023</h4>
-                </div>
-                <div>
-                    <Navbar navElements={navChoices}/>
-                </div>
-            </section>
-            <section className="flex-container">
-                <div className="col" style={{ width: '50%', height: '50%', margin: '10px', display: 'flex' }}>
-                <div style={{ flex: '1', marginRight: '10px' }}>
-                    <video autoPlay muted loop style={{ width: '100%', height: '500px' }}>
-                    <source src={require("../images/Animation.mp4")} type="video/mp4" />
-                    Your browser does not support the video tag.
-                    </video>
-                </div>
-                </div>
-            </section>
-            <footer>
-                <Footer />
-            </footer>
+          <section className="flex-container">
+            <div className="welcome-section">
+              <h1>RABRIT</h1>
+              <h3>Version 1.01</h3>
+              <h4>Last Updated: 7/12/2023</h4>
+              <Navbar navElements={navChoices} />
+            </div>
+            <div className="video-section">
+              <video autoPlay muted loop>
+                <source src={require("../images/Animation.mp4")} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </section>
+          <footer>
+            <Footer />
+          </footer>
         </section>
-    )
+      )
 };
 
 export default Home;

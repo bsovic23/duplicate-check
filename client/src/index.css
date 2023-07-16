@@ -12,22 +12,61 @@ code {
     monospace;
 }
 
-/* CSS */
-/* HOME =============================================== */
-.flex-container {
-  display: flex;
-  flex-direction: row;
+.application {
+  background-attachment: fixed;
+  min-height: 100vh;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,90,121,1) 11%, rgba(0,212,255,1) 100%);
 }
 
-.col {
-  flex: 1;
+h1, h2, h3, h4 {
+  text-align: center;
+}
+
+/* CSS */
+/* HOME =============================================== */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.welcome-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.video-section {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+video {
+  width: 100%;
+  height: 500px;
 }
 
 /* Footer =============================================== */
 
-.footer {
-  background: teal;
-  padding: 10px;
+footer {
+  width: 100%;
+  background-color:  rgba(9,90,121,1);
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: auto;
 }
 
 .footer .footer-instructions, .footer .footer-section-links,
@@ -55,6 +94,18 @@ code {
 }
 
 /* Duplicate Check ===================================== */
+/* Duplicate Check Import ======= */
+.duplicate-check-import .file-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+}
+
+.duplicate-check-import div input {
+  text-align: center;
+}
+
 /* Duplicate Check Form ======= */
 
 .duplicate-check-form form div {
@@ -100,5 +151,5 @@ th {
 
 .swiper-slide img {
   display: block;
-  width: 100%;
+  width: 80%;
 }
