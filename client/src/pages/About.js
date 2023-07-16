@@ -1,6 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// Components
+import Footer from '../components/Footer';
+
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -95,7 +98,10 @@ function About() {
                     </SwiperSlide>
                 </Swiper>
                 </div>
-            </section>     
+            </section>
+            <footer>
+                <Footer />
+            </footer>     
         </section>
     )
 };

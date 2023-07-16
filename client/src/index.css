@@ -23,6 +23,37 @@ code {
   flex: 1;
 }
 
+/* Footer =============================================== */
+
+.footer {
+  background: teal;
+  padding: 10px;
+}
+
+.footer .footer-instructions, .footer .footer-section-links,
+.footer .footer-instructions a {
+  text-align: center;
+  text-decoration: none;
+}
+
+.footer .icon {
+  height: 80px;
+  width: 80px;
+  margin: 10px;
+}
+
+.footer #github-icon {
+  color: black;
+}
+
+.footer #linkedin-icon {
+  color: blue;
+}
+
+.footer #linkedin-icon:hover, .footer #github-icon:hover {
+  color: yellow;
+}
+
 /* Duplicate Check ===================================== */
 /* Duplicate Check Form ======= */
 

@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Component Imports
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const Home = () => {
     const navChoices = [
@@ -34,8 +35,8 @@ const Home = () => {
                 </div>
                 </div>
             </section>
-            <footer className='footer'>
-                FOOTER: GITHUB AND LINKEDIN LOGO LINKS
+            <footer>
+                <Footer />
             </footer>
         </section>
     )
