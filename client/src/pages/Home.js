@@ -17,7 +17,7 @@ const Home = () => {
         <section className='home'>
           <section className="flex-container">
             <div className="welcome-section">
-              <h1>RABRIT</h1>
+              <h1>RA-BRIT</h1>
               <h3>Version 1.01</h3>
               <h4>Last Updated: 7/12/2023</h4>
               <Navbar navElements={navChoices} />

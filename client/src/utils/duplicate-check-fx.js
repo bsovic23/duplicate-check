@@ -222,7 +222,6 @@ export const functionThreeScreening = (excelData) => {
           i !== index &&
           o.firstName === obj.firstName &&
           o.lastName === obj.lastName &&
-          o.dob === obj.dob &&
           o.digits === obj.digits
       );
 
@@ -245,9 +244,7 @@ export const functionFourScreening = (excelData) => {
         (o, i) =>
           i !== index &&
           o.firstName === obj.firstName &&
-          o.lastName === obj.lastName &&
-          o.dob === obj.dob &&
-          o.digits === obj.digits
+          o.lastName === obj.lastName
       );
 
       if (matchingObjects.length > 0) {
@@ -269,7 +266,6 @@ export const functionFiveScreening = (excelData) => {
         (o, i) =>
           i !== index &&
           o.firstName === obj.firstName &&
-          o.lastName === obj.lastName &&
           o.dob === obj.dob &&
           o.digits === obj.digits
       );
@@ -292,7 +288,6 @@ export const functionSixScreening = (excelData) => {
       const matchingObjects = excelData.filter(
         (o, i) =>
           i !== index &&
-          o.firstName === obj.firstName &&
           o.lastName === obj.lastName &&
           o.dob === obj.dob &&
           o.digits === obj.digits
@@ -317,9 +312,7 @@ export const functionSevenScreening = (excelData) => {
         (o, i) =>
           i !== index &&
           o.firstName === obj.firstName &&
-          o.lastName === obj.lastName &&
-          o.dob === obj.dob &&
-          o.digits === obj.digits
+          o.dob === obj.dob 
       );
 
       if (matchingObjects.length > 0) {
@@ -340,10 +333,8 @@ export const functionEightScreening = (excelData) => {
       const matchingObjects = excelData.filter(
         (o, i) =>
           i !== index &&
-          o.firstName === obj.firstName &&
           o.lastName === obj.lastName &&
-          o.dob === obj.dob &&
-          o.digits === obj.digits
+          o.dob === obj.dob
       );
 
       if (matchingObjects.length > 0) {
@@ -364,8 +355,6 @@ export const functionNineScreening = (excelData) => {
       const matchingObjects = excelData.filter(
         (o, i) =>
           i !== index &&
-          o.firstName === obj.firstName &&
-          o.lastName === obj.lastName &&
           o.dob === obj.dob &&
           o.digits === obj.digits
       );

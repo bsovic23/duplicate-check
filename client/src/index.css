@@ -31,6 +31,11 @@ h1, h2, h3, h4 {
   align-items: center;
 }
 
+.home h1 {
+  font-size: 70px;
+  font-weight: 900;
+}
+
 .flex-container {
   display: flex;
   justify-content: center;
@@ -66,7 +71,7 @@ footer {
   background-color:  rgba(9,90,121,1);
   padding: 20px;
   box-sizing: border-box;
-  margin-top: auto;
+  margin-top: 150px;
 }
 
 .footer .footer-instructions, .footer .footer-section-links,
@@ -97,6 +102,7 @@ footer {
 .navbar .nav-link {
   font-size: 20px;
   margin: 10px;
+  font-weight: 700;
 }
 
 .navbar .nav-link:hover {
@@ -132,10 +138,24 @@ footer {
 
 .cell {
   padding: 8px;
+  border: 1px solid black;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  background-color: rgb(168, 165, 165);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20%;
 }
 
 th {
-  background-color: gray;
+  background-color: pink;
 }
 
 .duplicate-check-results .row .yes {

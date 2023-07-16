@@ -130,7 +130,7 @@ const DuplicateCheckResults = (props) => {
                     </div>
                     <div class="row">
                         <h4>FN, DOB, DIGITS</h4>
-                        <div>
+                        <div class='table-container'>
                             {resultFive.length > 1 ? (
                             <table border="1">
                                 <tr>
