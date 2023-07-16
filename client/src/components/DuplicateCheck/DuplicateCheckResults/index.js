@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const DuplicateCheckResults = (props) => {
     const { results } = props;
     const [resultOne, resultTwo, resultThree, resultFour, resultFive, resultSix, resultSeven, resultEight, resultNine ] = results;
+    console.log(resultOne);
+    console.log(resultThree);
 
     return(
         <section class='duplicate-check-results'>
@@ -13,6 +15,7 @@ const DuplicateCheckResults = (props) => {
                     <div class="row">
                         <h4>FN, LN, DOB, DIGITS</h4>
                         <div>
+                        {resultOne.length > 1 ? (
                             <table border="1">
                                 <tr>
                                     <th class='cell'>First Name</th>
@@ -22,7 +25,7 @@ const DuplicateCheckResults = (props) => {
                                     <th class='cell'>Site</th>
                                 </tr>
                                 {resultOne.map((data) => (
-                                <tr key={data.firstName} class={data.enter}>
+                                <tr key={data.id} >
                                     <td class='cell'>{data.firstName}</td>
                                     <td class='cell'>{data.lastName}</td>
                                     <td class='cell'>{data.dob}</td>
@@ -31,11 +34,15 @@ const DuplicateCheckResults = (props) => {
                                 </tr>
                             ))}
                             </table>
+                            ) : (
+                                <div>No duplicate for this test</div>
+                              )}
                         </div>
                     </div>
                     <div class="row">
                         <h4>FN, LN, DOB</h4>
                         <div>
+                        {resultTwo.length > 1 ? (
                             <table border="1">
                                 <tr>
                                     <th class='cell'>First Name</th>
@@ -45,7 +52,7 @@ const DuplicateCheckResults = (props) => {
                                     <th class='cell'>Site</th>
                                 </tr>
                                 {resultTwo.map((data) => (
-                                <tr key={data.firstName} class={data.enter}>
+                                <tr key={data.id}>
                                     <td class='cell'>{data.firstName}</td>
                                     <td class='cell'>{data.lastName}</td>
                                     <td class='cell'>{data.dob}</td>
@@ -54,11 +61,15 @@ const DuplicateCheckResults = (props) => {
                                 </tr>
                             ))}
                             </table>
+                            ) : (
+                                <div>No duplicate for this test</div>
+                              )}
                         </div>
                     </div>
                     <div class="row">
                         <h4>FN, LN, DIGITS</h4>
                         <div>
+                            {resultThree.length > 1 ? (
                             <table border="1">
                                 <tr>
                                     <th class='cell'>First Name</th>
@@ -68,7 +79,7 @@ const DuplicateCheckResults = (props) => {
                                     <th class='cell'>Site</th>
                                 </tr>
                                 {resultThree.map((data) => (
-                                <tr key={data.firstName} class={data.enter}>
+                                <tr key={data.id}>
                                     <td class='cell'>{data.firstName}</td>
                                     <td class='cell'>{data.lastName}</td>
                                     <td class='cell'>{data.dob}</td>
@@ -77,11 +88,15 @@ const DuplicateCheckResults = (props) => {
                                 </tr>
                             ))}
                             </table>
+                            ) : (
+                                <div>No duplicate for this test</div>
+                              )}
                         </div>
                     </div>
                     <div class="row">
                         <h4>FN, LN</h4>
                         <div>
+                            {resultFour.length > 1 ? (
                             <table border="1">
                                     <tr>
                                         <th class='cell'>First Name</th>
@@ -91,7 +106,7 @@ const DuplicateCheckResults = (props) => {
                                         <th class='cell'>Site</th>
                                     </tr>
                                     {resultFour.map((data) => (
-                                    <tr key={data.firstName} class={data.enter}>
+                                    <tr key={data.id}>
                                         <td class='cell'>{data.firstName}</td>
                                         <td class='cell'>{data.lastName}</td>
                                         <td class='cell'>{data.dob}</td>
@@ -100,11 +115,15 @@ const DuplicateCheckResults = (props) => {
                                     </tr>
                                 ))}
                             </table>
+                            ) : (
+                                <div>No duplicate for this test</div>
+                              )}
                         </div>
                     </div>
                     <div class="row">
                         <h4>FN, DOB, DIGITS</h4>
                         <div>
+                            {resultFive.length > 1 ? (
                             <table border="1">
                                 <tr>
                                     <th class='cell'>First Name</th>
@@ -114,7 +133,7 @@ const DuplicateCheckResults = (props) => {
                                     <th class='cell'>Site</th>
                                 </tr>
                                 {resultFive.map((data) => (
-                                <tr key={data.firstName} class={data.enter}>
+                                <tr key={data.id}>
                                     <td class='cell'>{data.firstName}</td>
                                     <td class='cell'>{data.lastName}</td>
                                     <td class='cell'>{data.dob}</td>
@@ -123,11 +142,15 @@ const DuplicateCheckResults = (props) => {
                                 </tr>
                             ))}
                             </table>
+                            ) : (
+                                <div>No duplicate for this test</div>
+                              )}
                         </div>
                     </div>
                     <div class="row">
                         <h4>FN, LN, DOB, DIGITS</h4>
                         <div>
+                            {resultSix.length > 1 ? (
                             <table border="1">
                                 <tr>
                                     <th class='cell'>First Name</th>
@@ -137,7 +160,7 @@ const DuplicateCheckResults = (props) => {
                                     <th class='cell'>Site</th>
                                 </tr>
                                 {resultSix.map((data) => (
-                                <tr key={data.firstName} class={data.enter}>
+                                <tr key={data.id}>
                                     <td class='cell'>{data.firstName}</td>
                                     <td class='cell'>{data.lastName}</td>
                                     <td class='cell'>{data.dob}</td>
@@ -146,11 +169,15 @@ const DuplicateCheckResults = (props) => {
                                 </tr>
                             ))}
                             </table>
+                            ) : (
+                                <div>No duplicate for this test</div>
+                              )}
                         </div>
                     </div>
                     <div class="row">
                         <h4>FN, LN</h4>
                         <div>
+                            {resultSeven.length > 1 ? (
                             <table border="1">
                                 <tr>
                                     <th class='cell'>First Name</th>
@@ -160,7 +187,7 @@ const DuplicateCheckResults = (props) => {
                                     <th class='cell'>Site</th>
                                 </tr>
                                 {resultSeven.map((data) => (
-                                <tr key={data.firstName} class={data.enter}>
+                                <tr key={data.id}>
                                     <td class='cell'>{data.firstName}</td>
                                     <td class='cell'>{data.lastName}</td>
                                     <td class='cell'>{data.dob}</td>
@@ -169,11 +196,15 @@ const DuplicateCheckResults = (props) => {
                                 </tr>
                             ))}
                             </table>
+                            ) : (
+                                <div>No duplicate for this test</div>
+                              )}
                         </div>
                     </div>
                     <div class="row">
                         <h4>LN, DOB</h4>
                         <div>
+                            {resultEight.length > 1 ? (
                             <table border="1">
                                 <tr>
                                     <th class='cell'>First Name</th>
@@ -183,7 +214,7 @@ const DuplicateCheckResults = (props) => {
                                     <th class='cell'>Site</th>
                                 </tr>
                                 {resultEight.map((data) => (
-                                <tr key={data.firstName} class={data.enter}>
+                                <tr key={data.id}>
                                     <td class='cell'>{data.firstName}</td>
                                     <td class='cell'>{data.lastName}</td>
                                     <td class='cell'>{data.dob}</td>
@@ -192,11 +223,15 @@ const DuplicateCheckResults = (props) => {
                                 </tr>
                             ))}
                             </table>
+                            ) : (
+                                <div>No duplicate for this test</div>
+                              )}
                         </div>
                     </div>
                     <div class="row">
                         <h4>DOB, DIGITS</h4>
                         <div>
+                            {resultNine.length > 1 ? (
                             <table border="1">
                                 <tr>
                                     <th class='cell'>First Name</th>
@@ -206,7 +241,7 @@ const DuplicateCheckResults = (props) => {
                                     <th class='cell'>Site</th>
                                 </tr>
                                 {resultNine.map((data) => (
-                                <tr key={data.firstName} class={data.enter}>
+                                <tr key={data.id}>
                                     <td class='cell'>{data.firstName}</td>
                                     <td class='cell'>{data.lastName}</td>
                                     <td class='cell'>{data.dob}</td>
@@ -215,6 +250,9 @@ const DuplicateCheckResults = (props) => {
                                 </tr>
                             ))}
                             </table>
+                            ) : (
+                                <div>No duplicate for this test</div>
+                              )}
                         </div>
                     </div>
                 </div>

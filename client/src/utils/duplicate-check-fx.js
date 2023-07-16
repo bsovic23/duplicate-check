@@ -179,7 +179,9 @@ export const functionOneScreening = (excelData) => {
           o.digits === obj.digits
       );
 
-      duplicates.push(obj, ...matchingObjects);
+      if (matchingObjects.length > 0) {
+        duplicates.push(obj, ...matchingObjects);
+      }
     }
   });
 
@@ -197,10 +199,12 @@ export const functionTwoScreening = (excelData) => {
           i !== index &&
           o.firstName === obj.firstName &&
           o.lastName === obj.lastName &&
-          o.dob === obj.dob 
+          o.dob === obj.dob
       );
 
-      duplicates.push(obj, ...matchingObjects);
+      if (matchingObjects.length > 0) {
+        duplicates.push(obj, ...matchingObjects);
+      }
     }
   });
 
@@ -218,10 +222,13 @@ export const functionThreeScreening = (excelData) => {
           i !== index &&
           o.firstName === obj.firstName &&
           o.lastName === obj.lastName &&
-          o.digits === obj.digits 
+          o.dob === obj.dob &&
+          o.digits === obj.digits
       );
 
-      duplicates.push(obj, ...matchingObjects);
+      if (matchingObjects.length > 0) {
+        duplicates.push(obj, ...matchingObjects);
+      }
     }
   });
 
@@ -238,10 +245,14 @@ export const functionFourScreening = (excelData) => {
         (o, i) =>
           i !== index &&
           o.firstName === obj.firstName &&
-          o.lastName === obj.lastName
+          o.lastName === obj.lastName &&
+          o.dob === obj.dob &&
+          o.digits === obj.digits
       );
 
-      duplicates.push(obj, ...matchingObjects);
+      if (matchingObjects.length > 0) {
+        duplicates.push(obj, ...matchingObjects);
+      }
     }
   });
 
@@ -258,11 +269,14 @@ export const functionFiveScreening = (excelData) => {
         (o, i) =>
           i !== index &&
           o.firstName === obj.firstName &&
-          o.digits === obj.digits &&
-          o.dob === obj.dob
+          o.lastName === obj.lastName &&
+          o.dob === obj.dob &&
+          o.digits === obj.digits
       );
 
-      duplicates.push(obj, ...matchingObjects);
+      if (matchingObjects.length > 0) {
+        duplicates.push(obj, ...matchingObjects);
+      }
     }
   });
 
@@ -278,12 +292,15 @@ export const functionSixScreening = (excelData) => {
       const matchingObjects = excelData.filter(
         (o, i) =>
           i !== index &&
+          o.firstName === obj.firstName &&
           o.lastName === obj.lastName &&
-          o.digits === obj.digits &&
-          o.dob === obj.dob
+          o.dob === obj.dob &&
+          o.digits === obj.digits
       );
 
-      duplicates.push(obj, ...matchingObjects);
+      if (matchingObjects.length > 0) {
+        duplicates.push(obj, ...matchingObjects);
+      }
     }
   });
 
@@ -300,10 +317,14 @@ export const functionSevenScreening = (excelData) => {
         (o, i) =>
           i !== index &&
           o.firstName === obj.firstName &&
-          o.dob === obj.dob
+          o.lastName === obj.lastName &&
+          o.dob === obj.dob &&
+          o.digits === obj.digits
       );
 
-      duplicates.push(obj, ...matchingObjects);
+      if (matchingObjects.length > 0) {
+        duplicates.push(obj, ...matchingObjects);
+      }
     }
   });
 
@@ -319,11 +340,15 @@ export const functionEightScreening = (excelData) => {
       const matchingObjects = excelData.filter(
         (o, i) =>
           i !== index &&
+          o.firstName === obj.firstName &&
           o.lastName === obj.lastName &&
-          o.dob === obj.dob
+          o.dob === obj.dob &&
+          o.digits === obj.digits
       );
 
-      duplicates.push(obj, ...matchingObjects);
+      if (matchingObjects.length > 0) {
+        duplicates.push(obj, ...matchingObjects);
+      }
     }
   });
 
@@ -339,11 +364,15 @@ export const functionNineScreening = (excelData) => {
       const matchingObjects = excelData.filter(
         (o, i) =>
           i !== index &&
-          o.digits === obj.digits &&
-          o.dob === obj.dob
+          o.firstName === obj.firstName &&
+          o.lastName === obj.lastName &&
+          o.dob === obj.dob &&
+          o.digits === obj.digits
       );
 
-      duplicates.push(obj, ...matchingObjects);
+      if (matchingObjects.length > 0) {
+        duplicates.push(obj, ...matchingObjects);
+      }
     }
   });
 

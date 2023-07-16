@@ -125,15 +125,15 @@ const DuplicateCheckForm = (props) => {
         const resultScreeningSeven = functionSevenScreening(excelData);
         const resultScreeningEight = functionEightScreening(excelData);
         const resultScreeningNine = functionNineScreening(excelData);
-        setScreeningOne(resultScreeningFour);
-        setScreeningTwo(resultScreeningFour);
-        setScreeningThree(resultScreeningFour);
+        setScreeningOne(resultScreeningOne);
+        setScreeningTwo(resultScreeningTwo);
+        setScreeningThree(resultScreeningThree);
         setScreeningFour(resultScreeningFour);
-        setScreeningFour(resultScreeningFour);
-        setScreeningFour(resultScreeningFour);
-        setScreeningFour(resultScreeningFour);
-        setScreeningFour(resultScreeningFour);
-        setScreeningNine(resultScreeningFour);
+        setScreeningFive(resultScreeningFive);
+        setScreeningSix(resultScreeningSix);
+        setScreeningSeven(resultScreeningSeven);
+        setScreeningEight(resultScreeningEight);
+        setScreeningNine(resultScreeningNine);
     };
 
     //  ===========================================================================
@@ -214,7 +214,7 @@ const DuplicateCheckForm = (props) => {
             </section>
             <section>
                 {(resultScreeningOne || resultScreeningTwo || resultScreeningThree || resultScreeningFour || resultScreeningFive || resultScreeningSix || resultScreeningSeven || resultScreeningEight || resultScreeningNine) && (
-                <DuplicateCheckScreeningResults results={[resultScreeningOne ,resultScreeningTwo, resultScreeningThree, resultScreeningFour, resultScreeningFive, resultScreeningSix, resultScreeningSeven, resultScreeningEight, resultScreeningNine]} />
+                <DuplicateCheckScreeningResults results={[resultScreeningOne, resultScreeningTwo, resultScreeningThree, resultScreeningFour, resultScreeningFive, resultScreeningSix, resultScreeningSeven, resultScreeningEight, resultScreeningNine]} />
                 )} 
             </section>
         </section>
