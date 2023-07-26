@@ -10,7 +10,7 @@ import DuplicateCheck from './pages/DuplicateCheck';
 function App() {
   return (
     <section class='application'>
-      <Router>
+      <Router basename="/duplicate-check">
         <Routes>
           <Route
             path="/"

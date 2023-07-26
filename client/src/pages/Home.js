@@ -8,10 +8,10 @@ import Footer from '../components/Footer';
 const Home = () => {
     const navChoices = [
         {id: 1, text: "Home", link: "/"},
-        {id: 2, text: "About", link: "/About"},
+        {id: 2, text: "About", link: "/about"},
         {id: 3, text: "Duplicate Check", link: "/duplicate"},
         {id: 4, text: "Comment", link: "/"},
-        {id: 5, text: "What's New", link: "/"}
+        {id: 5, text: "What's New", link: "/duplicate-check/"}
     ];
 
     return (
