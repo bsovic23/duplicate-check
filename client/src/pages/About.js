@@ -72,28 +72,34 @@ function About() {
                         className="mySwiper"
                     >
                     <SwiperSlide>
-                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                        <div>
+                            <h1>Increased Accuracy</h1>
+                            <p>Nine individual tests of duplicate screening</p>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                        <div>
+                            <h1>Polished UI/UX</h1>
+                            <p>User friendly</p>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                        <div>
+                            <h1>Availability</h1>
+                            <p>Any user can access and use</p>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                        <div>
+                            <h1>Speed</h1>
+                            <p>RA-BRIT runs quicker than any REDCap or SAS Duplicate Screening</p>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                        <div>
+                            <h1>Cost</h1>
+                            <p>No REDCap or SAS purchase and/or user fees</p>
+                        </div>
                     </SwiperSlide>
                 </Swiper>
                 </div>

@@ -180,7 +180,8 @@ th {
   height: 300px;
 }
 
-.swiper-slide img {
+.swiper-slide div {
   display: block;
   width: 80%;
+  margin-bottom: 100px;
 }

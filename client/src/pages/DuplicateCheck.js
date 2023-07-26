@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 // Component Imports
 import Navbar from '../components/Navbar';
 import DuplicateCheckImport from '../components/DuplicateCheck/DuplicateCheckImport';
+import Footer from '../components/Footer';
 
 const DuplicateCheck = () => {
     const navChoices = [
@@ -22,6 +23,9 @@ const DuplicateCheck = () => {
             </div>
             <section>
                 < DuplicateCheckImport />
+            </section>
+            <section>
+                <Footer />
             </section>
         </section>
     )

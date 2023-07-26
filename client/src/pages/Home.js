@@ -10,7 +10,8 @@ const Home = () => {
         {id: 1, text: "Home", link: "/"},
         {id: 2, text: "About", link: "/About"},
         {id: 3, text: "Duplicate Check", link: "/duplicate"},
-        {id: 4, text: "Comment", link: "/"}
+        {id: 4, text: "Comment", link: "/"},
+        {id: 5, text: "What's New", link: "/"}
     ];
 
     return (
@@ -18,8 +19,7 @@ const Home = () => {
           <section className="flex-container">
             <div className="welcome-section">
               <h1>RA-BRIT</h1>
-              <h3>Version 1.01</h3>
-              <h4>Last Updated: 7/12/2023</h4>
+              <h3>Version 1.01.00</h3>
               <Navbar navElements={navChoices} />
             </div>
             <div className="video-section">
