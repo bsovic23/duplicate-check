@@ -20,7 +20,7 @@ function About() {
                 <h1>About the Co-Enrollment Application</h1>
             </section>
             <section>
-                NAVBAR
+                PAGE NAVBAR HERE
             </section>
             <section class="container">
                 <div class="m-5 row">
