@@ -7,10 +7,11 @@ import Footer from '../components/Footer';
 
 const DuplicateCheck = () => {
     const navChoices = [
-        {id: 1, text: "Home", link: "/"},
-        {id: 2, text: "About", link: "/About"},
-        {id: 3, text: "Duplicate Check", link: "/duplicate"},
-        {id: 4, text: "Comment", link: "/"}
+        {id: 1, text: "Home", link: "/duplicate-check/"},
+        {id: 2, text: "About", link: "/duplicate-check/about"},
+        {id: 3, text: "Duplicate Check", link: "/duplicate-check/duplicate"},
+        {id: 4, text: "Comment", link: "/duplicate-check/"},
+        {id: 5, text: "What's New", link: "/duplicate-check/"}
     ];
 
     return(

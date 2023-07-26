@@ -13,15 +13,15 @@ function App() {
       <Router>
         <Routes>
           <Route
-            path="/"
+            path="/duplicate-check/"
             element={<Home />}
           />
           <Route
-            path="/about"
+            path="/duplicate-check/about"
             element={<About />}
           />
           <Route
-            path="/duplicate"
+            path="/duplicate-check/duplicate"
             element={<DuplicateCheck />}
           />
           <Route
