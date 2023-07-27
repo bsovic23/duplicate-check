@@ -98,7 +98,7 @@ footer {
   color: yellow;
 }
 
-/* Navbar =============================================== */
+/* Home Navbar =============================================== */
 .navbar .nav-link {
   font-size: 20px;
   margin: 10px;
@@ -108,6 +108,31 @@ footer {
 .navbar .nav-link:hover {
   color: yellow;
   transition: 0.9s;
+}
+
+/* Page Navbar ================================================ */
+.page-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-navbar .nav {
+  display: flex;
+  margin-left: 10%;
+}
+
+.page-navbar .nav-link {
+  margin-right: 50px; /* Optional: Add margin between the buttons */
+}
+
+.nav button {
+  color: white;
+  background-color: navy;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Duplicate Check ===================================== */
@@ -135,6 +160,10 @@ footer {
 }
 
 /* Duplicate Check Results ======= */
+.duplicate-check-results h3 {
+  padding-left: 20%;
+  padding-right: 20%;
+}
 
 .cell {
   padding: 8px;
@@ -178,6 +207,11 @@ th {
   background-size: cover;
   width: 300px;
   height: 300px;
+  background-color: rgba(128, 128, 128, 0.701);
+}
+
+.swiper-slide p {
+  margin-left: 25px;
 }
 
 .swiper-slide div {

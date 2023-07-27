@@ -4,8 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const DuplicateCheckResults = (props) => {
     const { results } = props;
     const [resultOne, resultTwo, resultThree, resultFour, resultFive, resultSix, resultSeven, resultEight, resultNine ] = results;
-    console.log(resultOne);
-    console.log(resultThree);
 
     return(
         <section class='duplicate-check-results'>
@@ -158,7 +156,7 @@ const DuplicateCheckResults = (props) => {
                         </div>
                     </div>
                     <div class="row">
-                        <h4>FN, LN, DOB, DIGITS</h4>
+                        <h4>LN, DOB, DIGITS</h4>
                         <div>
                             {resultSix.length > 1 ? (
                             <table border="1">
@@ -187,7 +185,7 @@ const DuplicateCheckResults = (props) => {
                         </div>
                     </div>
                     <div class="row">
-                        <h4>FN, LN</h4>
+                        <h4>FN, DOB</h4>
                         <div>
                             {resultSeven.length > 1 ? (
                             <table border="1">

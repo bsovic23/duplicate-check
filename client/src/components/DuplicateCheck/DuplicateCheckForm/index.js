@@ -116,6 +116,7 @@ const DuplicateCheckForm = (props) => {
 
     const handleSubmitScreening = (event) => {
         event.preventDefault();
+        console.log(excelData);
         const resultScreeningOne = functionOneScreening(excelData);
         const resultScreeningTwo = functionTwoScreening(excelData);
         const resultScreeningThree = functionThreeScreening(excelData);

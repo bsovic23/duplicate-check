@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Components
 import Footer from '../components/Footer';
+import PageNavbar from '../components/PageNavbar';
 
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,13 +15,21 @@ import { EffectCoverflow, Keyboard, Pagination, Navigation } from 'swiper/module
 import 'swiper/css';
 
 function About() {
+    const navChoices = [
+        {id: 1, text: "Home", link: "/"},
+        {id: 2, text: "About", link: "/about"},
+        {id: 3, text: "Duplicate Check", link: "/duplicate"},
+        {id: 4, text: "Comment", link: "/"},
+        {id: 5, text: "What's New", link: "/"}
+    ];
+
     return(
         <section>
             <section>
                 <h1>About the Co-Enrollment Application</h1>
             </section>
             <section>
-                PAGE NAVBAR HERE
+                <PageNavbar navElements={navChoices} />
             </section>
             <section class="container">
                 <div class="m-5 row">
@@ -80,7 +89,7 @@ function About() {
                     <SwiperSlide>
                         <div>
                             <h1>Polished UI/UX</h1>
-                            <p>User friendly</p>
+                            <p>User friendly to learn and use</p>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>

@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 
 // Component Imports
-import Navbar from '../components/Navbar';
+import PageNavbar from '../components/PageNavbar';
 import DuplicateCheckImport from '../components/DuplicateCheck/DuplicateCheckImport';
 import Footer from '../components/Footer';
 
 const DuplicateCheck = () => {
     const navChoices = [
-        {id: 1, text: "Home", link: "/duplicate-check/"},
-        {id: 2, text: "About", link: "/duplicate-check/about"},
-        {id: 3, text: "Duplicate Check", link: "/duplicate-check/duplicate"},
-        {id: 4, text: "Comment", link: "/duplicate-check/"},
-        {id: 5, text: "What's New", link: "/duplicate-check/"}
+        {id: 1, text: "Home", link: "/"},
+        {id: 2, text: "About", link: "/about"},
+        {id: 3, text: "Duplicate Check", link: "/duplicate"},
+        {id: 4, text: "Comment", link: "/"},
+        {id: 5, text: "What's New", link: "/"}
     ];
 
     return(
@@ -20,7 +20,7 @@ const DuplicateCheck = () => {
                 <h1>Duplicate Check</h1>
             </section>
             <div>
-                <Navbar navElements={navChoices} />
+                < PageNavbar navElements={navChoices} />
             </div>
             <section>
                 < DuplicateCheckImport />

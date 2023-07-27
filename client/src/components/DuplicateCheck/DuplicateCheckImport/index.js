@@ -38,10 +38,9 @@ const DuplicateCheckImport = () => {
       data.push(rowData);
     }
   });
-
-    // Use the 'data' array here or pass it to another function/component
     setExcelData(data);
   };
+
 
   return (
     <section class="duplicate-check-import">

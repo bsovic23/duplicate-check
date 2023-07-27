@@ -11,7 +11,7 @@ const Home = () => {
         {id: 2, text: "About", link: "/about"},
         {id: 3, text: "Duplicate Check", link: "/duplicate"},
         {id: 4, text: "Comment", link: "/"},
-        {id: 5, text: "What's New", link: "/duplicate-check/"}
+        {id: 5, text: "What's New", link: "/"}
     ];
 
     return (
