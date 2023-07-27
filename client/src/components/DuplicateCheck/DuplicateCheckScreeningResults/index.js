@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const DuplicateCheckScreeningResults = (props) => {
     const { results } = props;
     const [resultScreeningOne, resultScreeningTwo, resultScreeningThree, resultScreeningFour, resultScreeningFive, resultScreeningSix, resultScreeningSeven, resultScreeningEight, resultScreeningNine] = results;
-    console.log(results);
 
     return(
         <section class='duplicate-check-results'>
