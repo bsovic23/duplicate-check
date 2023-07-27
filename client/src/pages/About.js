@@ -20,7 +20,7 @@ function About() {
         {id: 2, text: "About", link: "/about"},
         {id: 3, text: "Duplicate Check", link: "/duplicate"},
         {id: 4, text: "Comment", link: "/"},
-        {id: 5, text: "What's New", link: "/"}
+        {id: 5, text: "What's New", link: "/whats-new"}
     ];
 
     return(
@@ -35,7 +35,13 @@ function About() {
                 <div class="m-5 row">
                     <div class="col">
                         <h2>About Brit</h2>
-                        <p>Decription Brit</p>
+                        <p>
+                        Currently, I serve as the Senior Data Analytics Director for the prestigious National Kidney Foundation, where I harness the power of data to drive insights, inform decision-making, and positively impact public health initiatives. My love for data analysis and software engineering has been the driving force behind my career, as I am passionate about using data-driven approaches to tackle real-world challenges and make a meaningful difference in people's lives.
+                        
+                        I hold a Bachelor of Science degree in Public Health and a Master of Public Health with a specialization in Epidemiology. Additionally, I have obtained a Full Stack Web Design certificate, enabling me to blend my expertise in data analysis and software engineering with modern web technologies.
+
+                        Beyond my professional pursuits, I am an avid sports enthusiast. You can find me cheering passionately for the Cleveland Cavaliers, Dallas Cowboys, Alabama Crimson Tide Football team, and the Syracuse basketball team.
+                        </p>
                     </div>
                     <div class="col">
                         <h2>Application Tests For</h2>

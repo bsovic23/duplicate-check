@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Page Imports
 import Home from './pages/Home';
 import About from './pages/About';
+import WhatsNew from './pages/WhatsNew';
 import NoMatch from './pages/NoMatch';
 import DuplicateCheck from './pages/DuplicateCheck';
 
@@ -23,6 +24,10 @@ function App() {
           <Route
             path="/duplicate"
             element={<DuplicateCheck />}
+          />
+          <Route
+            path="/whats-new"
+            element={<WhatsNew />}
           />
           <Route
             path="*"
